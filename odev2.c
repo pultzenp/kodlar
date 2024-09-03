@@ -3,7 +3,7 @@
 
 int main()
 {
-    char sesliHarfler[] = {'a', 'e', 'i', 'o', 'u', '\0'};
+    char sesliHarfler[] = {'a', 'e', 'i', 'o', 'u'};
     char kelime[50];
     int toplam = 0;
     int len = strlen(sesliHarfler);
@@ -11,10 +11,17 @@ int main()
     printf("LutfenN bir kelime giriniz: ");
     scanf("%s", &kelime);
 
-    for (int i = 0; i < len; i++)
+    int lenx = strlen(kelime);
+
+    for (int i = 0; i < lenx; i++)
     {
-        if (sesliHarfler[] == kelime[i])
-            toplam++;
+        for (int j = 0; j < len; j++)
+        {
+            if (sesliHarfler[j] == kelime[i])
+            {
+                toplam++;
+            }
+        }
     }
 
     printf("Girdiginiz %s kelimesindeki sesli harf sayisi %d dir..", kelime, toplam);
