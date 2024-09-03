@@ -8,7 +8,7 @@ int main()
     int toplam = 0;
     int len = strlen(sesliHarfler);
 
-    printf("Lutfen bir kelime giriniz: ");
+    printf("LutfenN bir kelime giriniz: ");
     scanf("%s", &kelime);
 
     for (int i = 0; i < len; i++)
