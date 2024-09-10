@@ -10,16 +10,15 @@ int fibonacci(int n)
     {
         return 1;
     }
-        return fibonacci(n-1) + fibonacci(n-2);
-    
+    return fibonacci(n - 1) + fibonacci(n - 2);
 }
 int main()
 {
     int x;
     printf("Lutfen bir sayi giriniz: ");
     scanf("%d", &x);
-    x = fibonacci(x);
-    printf("Girdiginiz x sayisinin fibonacci degeri %d dir..", fibonacci(x));
+    int result = fibonacci(x);
+    printf("Girdiginiz x sayisinin fibonacci degeri %d dir..", result);
 
     return 0;
 }
