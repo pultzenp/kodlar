@@ -26,39 +26,29 @@ int main()
     int len = strlen(kelime);
     char guess;
     int tahminSayisi = 0;
+
     bool inMind[5];
-    bool find = 0;
 
     for (int i = 0; i < 5; i++)
     {
         inMind[i] = 0;
     }
 
-    for (tahminSayisi = 0; tahminSayisi < max_try_count;)
+    while (tahminSayisi <= max_try_count)
     {
-        printf("\nLutfen bir harf giriniz\n");
-        scanf("\n %c", &guess);
+        printf("Lutfen bir harf giriniz: ");
+        scanf("%c", guess);
 
         for (int i = 0; i < len; i++)
         {
-
-            if (kelime[i] == guess)
+            if (guess == kelime[i])
             {
                 inMind[i] = 1;
-                find = 1;
             }
-        }
-
-        if (find == 0)
-        {
-            tahminSayisi++;
-        }
-        ekranaBastirma(inMind, kelime);
-
-        if (inMind == kelime)
-        {
-            printf("\nTebrikler! oyunu kazandiniz.");
-            return 0;
+            if (guess = !kelime[i])
+            {
+                tahminSayisi++;
+            }
         }
     }
 }
