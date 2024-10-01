@@ -4,6 +4,17 @@
 #include <stdbool.h>
 #define max_try_count 10
 
+bool isDone(bool inMind[5], int len)
+{
+    for (int i = 0; i < len; i++)
+    {
+        if (inMind[i] != 1)
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
 void ekranaBastirma(bool inMind[], char kelime[])
 {
     for (int i = 0; i < 5; i++)
@@ -36,7 +47,7 @@ int main()
 
     for (tahminSayisi = 0; tahminSayisi < max_try_count;)
     {
-        printf("\nLutfen bir harf giriniz\n");
+        printf("\nLutfen bir harf giriniz\n\n");
         scanf("\n %c", &guess);
 
         for (int i = 0; i < len; i++)
@@ -55,9 +66,9 @@ int main()
         }
         ekranaBastirma(inMind, kelime);
 
-        if (inMind == kelime)
+        if (isDone(inMind, len) == 1)
         {
-            printf("\nTebrikler! oyunu kazandiniz.");
+            printf("\nOyunu kazandiniz. Tebrikler.");
             return 0;
         }
     }
