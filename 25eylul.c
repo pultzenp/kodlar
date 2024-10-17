@@ -4,6 +4,56 @@
 #include <stdbool.h>
 #define max_try_count 10
 
+int findN(char newString[])
+{
+    int len = strlen(newString);
+    int n = 0;
+    for (int i = 0; i < len; i++)
+    {
+        if (newString[i] == '\n')
+        {
+            n++;
+        }
+    }
+    return n;
+}
+
+int randomFonk(int n)
+{
+    int value = rand() % (n + 1);
+    return value;
+}
+char *copy(char newString[], char kelime[], int value, int n)
+{
+    int currentLine = 0;
+    int numberofwords = 0;
+    int startLine = 0;
+    for (int i = 0; i > value; i++)
+    {
+        if (newString[i] == '\n')
+        {
+            currentLine++;
+        }
+        if (currentLine == value)
+        {
+            numberofwords++;
+        }
+    }
+
+    strncpy();
+}
+
+char *getRand()
+{
+    FILE *fptr;
+    fptr = fopen("first-names.txt", "r");
+    char newString[50000];
+    fgets(newString, 50000, fptr);
+
+    int n = findN(newString);
+    randomFonk(n);
+}
+
 bool isDone(bool inMind[5], int len)
 {
     for (int i = 0; i < len; i++)
