@@ -11,12 +11,12 @@ int printRandom(int upperBound, int lowerBound)
 
 int control(int sumPlayer, int sumAdmin)
 {
-    if (sumPlayer == 21)
+    if (sumPlayer == 21 && dealerTotal != 21)
     {
         printf("You won the game. BlackJack.\n");
         return 0;
     }
-    if (sumAdmin == 21)
+    if (sumAdmin == 21) 
     {
         printf("You lost the game. Admin made BlackJack!\n");
         return 0;
